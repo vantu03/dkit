@@ -1,0 +1,28 @@
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# build cache
+*.tsbuildinfo
+.turbo/
+.cache/
+.eslintcache
+
+# env
+.env
+.env.*
+
+
+# optional: if you generate coverage
+coverage/
