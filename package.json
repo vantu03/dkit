@@ -17,8 +17,7 @@
   },
   "peerDependencies": {
     "react": "^18",
-    "react-dom": "^18",
-    "react-router-dom": "^6.30.3"
+    "react-dom": "^18"
   },
   "dependencies": {
     "clsx": "^2.1.1",
