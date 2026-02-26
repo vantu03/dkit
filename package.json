@@ -7,8 +7,8 @@
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "kui.css",
-    "tailwind-preset.cjs"
+    "styles.css",
+    "tailwind.config.js"
   ],
   "exports": {
     ".": {
@@ -17,17 +17,17 @@
       "require": "./dist/index.cjs"
     },
     "./tailwind-preset": {
-      "require": "./tailwind-preset.cjs"
+      "require": "./tailwind.config.js"
     },
-    "./kui.css": "./kui.css"
+    "./styles.css": "./dist/styles.css"
   },
   "sideEffects": [
-    "*.css"
+    "**/*.css"
   ],
   "scripts": {
-    "build:css": "npx tailwindcss -i ./src/styles.css -o ./kui.css --minify",
+    "build:css": "npx @tailwindcss/cli -c tailwind.config.js -i ./src/styles/tailwind.css -o ./dist/styles.css --minify",
     "build": "npm run build:css && tsup src/index.ts --format cjs,esm --dts",
-    "dev": "npm run build:css && tsup src/index.ts --format cjs,esm --dts --watch",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "prepare": "npm run build"
   },
   "peerDependencies": {
