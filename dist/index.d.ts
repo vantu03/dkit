@@ -80,18 +80,6 @@ interface PaginationProps {
 }
 declare function AppPagination({ page, size, total, onPageChange, onSizeChange, pageSizeOptions, delta, }: PaginationProps): react_jsx_runtime.JSX.Element;
 
-interface TabItem {
-    key: string;
-    label: string;
-    content: React.ReactNode;
-    icon?: React.ReactNode;
-}
-declare function Tabs({ items, defaultKey, onChange, }: {
-    items: (TabItem | null | boolean)[];
-    defaultKey?: string;
-    onChange?: (key: string) => void;
-}): react_jsx_runtime.JSX.Element;
-
 interface AppTableColumn<T> {
     key: string;
     dataIndex?: string;
@@ -127,4 +115,11 @@ declare function Tag({ children, type, ...props }: {
     children: React.ReactNode;
 } & React.HTMLAttributes<HTMLSpanElement>): react_jsx_runtime.JSX.Element;
 
-export { Button, Checkbox, AppDivider as Divider, Form, type FormCallback, type FormValues, Info, LoadingSpinner, AppOverlay as Overlay, AppPagination as Pagination, Select, Tabs as Tab, AppTable as Table, Tag, Textarea as TextArea, Input as TextInput, useFormDisabled, useFormInitialValues };
+declare function Card({ title, description, actions, children, ...props }: {
+    title?: React$1.ReactNode;
+    children: React$1.ReactNode;
+    description?: React$1.ReactNode;
+    actions?: React$1.ReactNode;
+} & Omit<React$1.HTMLAttributes<HTMLDivElement>, "title">): react_jsx_runtime.JSX.Element;
+
+export { Button, Card, Checkbox, AppDivider as Divider, Form, type FormCallback, type FormValues, Info, LoadingSpinner, AppOverlay as Overlay, AppPagination as Pagination, Select, AppTable as Table, Tag, Textarea as TextArea, Input as TextInput, useFormDisabled, useFormInitialValues };
