@@ -3,9 +3,13 @@
   "version": "0.1.4",
   "description": "React design kit components",
   "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": ["dist", "styles.css", "tailwind-preset.cjs"],
+  "files": [
+    "dist",
+    "styles.css",
+    "tailwind-preset.cjs"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -17,10 +21,13 @@
     },
     "./styles.css": "./styles.css"
   },
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts",
-    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "build:css": "npx tailwindcss -i ./src/styles.css -o ./styles.css --minify",
+    "build": "npm run build:css && tsup src/index.ts --format cjs,esm --dts",
+    "dev": "npm run build:css && tsup src/index.ts --format cjs,esm --dts --watch",
     "prepare": "npm run build"
   },
   "peerDependencies": {
@@ -32,8 +39,12 @@
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   }
