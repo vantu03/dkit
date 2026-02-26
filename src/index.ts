@@ -7,10 +7,10 @@ export { default as Select } from "./components/form/select";
 export { default as Checkbox } from "./components/form/checkbox";
 export { default as Divider } from "./components/form/divider";
 
-// Form hooks/types (nếu form.tsx có export hook như useFormDisabled, useFormInitialValues...)
+// Form hooks/types
 export * from "./components/form/form";
 
-// UI/feedback
+// Components
 export { default as LoadingSpinner } from "./components/loading-spinner";
 export { default as Overlay } from "./components/overlay";
 export { default as Info } from "./components/info";
