@@ -19,7 +19,7 @@
     "./tailwind-preset": {
       "require": "./tailwind.config.cjs"
     },
-    "./dkit.css": "./src/styles/styles.css"
+    "./dkit.css": "./src/styles/tokens.css"
   },
   "sideEffects": [
     "**/*.css"
