@@ -19,14 +19,14 @@
     "./tailwind-preset": {
       "require": "./tailwind.config.cjs"
     },
-    "./styles.css": "./dist/styles.css"
+    "./dkit.css": "./dist/dkit.css"
   },
   "sideEffects": [
     "**/*.css"
   ],
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts && npm run build:css",
-    "build:css": "tailwindcss -c tailwind.config.cjs -i ./src/styles/tailwind.css -o ./dist/styles.css --minify",
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/dkit.css --minify",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "prepare": "npm run build"
   },
