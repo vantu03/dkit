@@ -19,14 +19,13 @@
     "./tailwind-preset": {
       "require": "./tailwind.config.js"
     },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./src/styles/tailwind.css"
   },
   "sideEffects": [
     "**/*.css"
   ],
   "scripts": {
-    "build:css": "npx @tailwindcss/cli -c tailwind.config.js -i ./src/styles/tailwind.css -o ./dist/styles.css --minify",
-    "build": "npm run build:css && tsup src/index.ts --format cjs,esm --dts",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "prepare": "npm run build"
   },
@@ -39,7 +38,6 @@
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.2.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.27",
