@@ -1,7 +1,7 @@
 // Form components
 export { default as Button } from "./components/form/button";
 export { default as Form } from "./components/form/form";
-export { default as TextInput } from "./components/form/input";
+export { default as Input } from "./components/form/input";
 export { default as TextArea } from "./components/form/textarea";
 export { default as Select } from "./components/form/select";
 export { default as Checkbox } from "./components/form/checkbox";

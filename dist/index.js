@@ -36,6 +36,7 @@ __export(index_exports, {
   Divider: () => AppDivider,
   Form: () => Form,
   Info: () => Info,
+  Input: () => Input,
   LoadingSpinner: () => LoadingSpinner,
   Overlay: () => AppOverlay,
   Pagination: () => AppPagination,
@@ -43,7 +44,6 @@ __export(index_exports, {
   Table: () => AppTable,
   Tag: () => Tag,
   TextArea: () => Textarea,
-  TextInput: () => Input,
   useFormDisabled: () => useFormDisabled,
   useFormInitialValues: () => useFormInitialValues
 });
@@ -778,6 +778,7 @@ function Card({
   Divider,
   Form,
   Info,
+  Input,
   LoadingSpinner,
   Overlay,
   Pagination,
@@ -785,7 +786,6 @@ function Card({
   Table,
   Tag,
   TextArea,
-  TextInput,
   useFormDisabled,
   useFormInitialValues
 });

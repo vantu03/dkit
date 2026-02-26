@@ -726,6 +726,7 @@ export {
   AppDivider as Divider,
   Form,
   Info,
+  Input,
   LoadingSpinner,
   AppOverlay as Overlay,
   AppPagination as Pagination,
@@ -733,7 +734,6 @@ export {
   AppTable as Table,
   Tag,
   Textarea as TextArea,
-  Input as TextInput,
   useFormDisabled,
   useFormInitialValues
 };
