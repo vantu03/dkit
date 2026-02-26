@@ -5,16 +5,7 @@
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "styles",
-    "tailwind-preset.cjs"
-  ],
-  "exports": {
-    ".": "./dist/index.js",
-    "./styles.css": "./styles/theme.css",
-    "./tailwind-preset.cjs": "./tailwind-preset.cjs"
-  },
+  "files": ["dist", "styles", "tailwind-preset.cjs"],
   "sideEffects": false,
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
