@@ -1,6 +1,6 @@
 {
   "name": "dkit",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "React design kit components",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
