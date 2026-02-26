@@ -15,6 +15,6 @@ export { default as LoadingSpinner } from "./components/loading-spinner";
 export { default as Overlay } from "./components/overlay";
 export { default as Info } from "./components/info";
 export { default as Pagination } from "./components/pagination";
-export { default as Tab } from "./components/tab";
 export { default as Table } from "./components/table";
 export { default as Tag } from "./components/tag";
+export { default as Card } from "./components/card";
