@@ -5,7 +5,18 @@
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "styles", "tailwind-preset.cjs"],
+  "files": ["dist", "styles.css", "tailwind-preset.cjs"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./tailwind-preset": {
+      "require": "./tailwind-preset.cjs"
+    },
+    "./styles.css": "./styles.css"
+  },
   "sideEffects": false,
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
